@@ -1,33 +1,13 @@
 import { Action } from "redux";
 import { ThunkAction } from "redux-thunk";
 import { RootStateDef } from ".";
+import { ForAxiosDefs } from "../../commonTypes";
 
 export interface RootState {
     dropDownReducer: {
         display: boolean;
     };
 }
-
-export type ForAxiosDefs =
-    | "get"
-    | "GET"
-    | "delete"
-    | "DELETE"
-    | "head"
-    | "HEAD"
-    | "options"
-    | "OPTIONS"
-    | "post"
-    | "POST"
-    | "put"
-    | "PUT"
-    | "patch"
-    | "PATCH"
-    | "link"
-    | "LINK"
-    | "unlink"
-    | "UNLINK"
-    | undefined;
 
 export interface storeActionPropsDefs {
     path: string;
