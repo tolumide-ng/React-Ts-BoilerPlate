@@ -1,0 +1,17 @@
+.appwide {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.appwide-container {
+    max-width: 1500px;
+    width: 100%;
+    background-color: var(--color-white);
+}
+
+.scroll-lock {
+    overflow: hidden;
+}
