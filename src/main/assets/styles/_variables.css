@@ -1,0 +1,18 @@
+:root {
+    --app-default-color: green;
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+    }
+}
+
+@media screen and (max-width: 745px) {
+    :root {
+    }
+}
+
+@media screen and (max-width: 343px) {
+    :root {
+    }
+}
