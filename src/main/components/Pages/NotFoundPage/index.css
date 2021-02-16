@@ -1,0 +1,19 @@
+.notfd {
+    min-height: 96vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfd-cont {
+    justify-content: center;
+    border: 1px solid red;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.notfd-title {
+    color: green;
+}
