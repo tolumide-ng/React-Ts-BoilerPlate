@@ -2,7 +2,11 @@ import { Action } from "redux";
 import { ThunkAction } from "redux-thunk";
 import { RootStateDef } from ".";
 
-export interface RootState {}
+export interface RootState {
+    dropDownReducer: {
+        display: boolean;
+    };
+}
 
 export type ForAxiosDefs =
     | "get"
