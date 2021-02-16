@@ -14,7 +14,7 @@ interface MakeCallDef {
     params?: {};
 }
 
-export const reusableMakeCall = async (props: MakeCallDef) => {
+export const useActionCall = async (props: MakeCallDef) => {
     await props.dispatch(
         props.requestFunc({
             path: props.path,
