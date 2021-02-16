@@ -1,6 +1,6 @@
-import { setDropDownState } from "./types";
+import { SetDropDownState } from "./types";
 
-export const appDropDown: setDropDownState = {
+export const appDropDown: SetDropDownState = {
     display: undefined,
 };
 

@@ -1,19 +1,19 @@
 import { SET_CLOSE_DROPDOWN, SET_DISPLAY_DROPDOWN } from "./actionTypes";
 
-export interface setDropDownState {
+export interface SetDropDownState {
     readonly display: boolean | undefined;
 }
 
-export interface setDisplayDropDownActionDef {
+export interface SetDisplayDropDownActionDef {
     type: typeof SET_DISPLAY_DROPDOWN;
-    payload: setDropDownState;
+    payload: SetDropDownState;
 }
 
-export interface setCloseDropDownActionDef {
+export interface SetCloseDropDownActionDef {
     type: typeof SET_CLOSE_DROPDOWN;
-    payload: setDropDownState;
+    payload: SetDropDownState;
 }
 
-export type setDropDownActionTypeDef =
-    | setDisplayDropDownActionDef
-    | setCloseDropDownActionDef;
+export type SetDropDownActionTypeDef =
+    | SetDisplayDropDownActionDef
+    | SetCloseDropDownActionDef;
