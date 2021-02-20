@@ -1,10 +1,16 @@
 import * as React from "react";
+import { LandingRight } from "../../UI/organims/LandingRight";
 import "./index.css";
 
 export const LandingPage = () => {
     return (
         <article className="ldpg">
-            <h1>this is the landing page of the application</h1>
+            <article className="ldpg-cont">
+                <article className="ldpg-left"></article>
+                <article className="ldpg-right">
+                    <LandingRight />
+                </article>
+            </article>
         </article>
     );
 };

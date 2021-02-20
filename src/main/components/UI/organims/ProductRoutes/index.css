@@ -1,0 +1,131 @@
+.product {
+    --hue: 328deg;
+    --accent: var(--hue) 100% 54%;
+    --indicator-size: 2px;
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    position: relative;
+    padding-left: 9px;
+}
+
+.product:matches(header, nav, section, article, a) {
+    /* outline-color: hsl(var(--accent)); */
+    outline-offset: -5px;
+}
+
+.product-nav > a {
+    margin-right: 20px;
+    text-transform: capitalize;
+    scroll-snap-align: start;
+
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+
+    font-size: 14px;
+    color: var(--color-scorpion);
+    outline: none;
+    font-family: helvet;
+}
+
+.product-nav a:focus {
+    outline: -0.5ch;
+}
+
+.product-nav {
+    margin-bottom: 21px;
+}
+
+.scroll-snap-x {
+    overflow: auto hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    position: relative;
+}
+
+/* header.scroll-snap-x::after {
+    inline-size: 0;
+    block-size: 1px;
+    border-radius: 2px;
+    background-color: var(--color-scorpion);
+    height: 2px;
+    width: 85%;
+    margin-bottom: 17px;
+    position: absolute;
+    top: 0;
+} */
+
+.product-header {
+    margin-bottom: 17px;
+}
+
+.product-indicator {
+    inline-size: 0;
+    block-size: 1px;
+    border-radius: 2px;
+    background-color: var(--color-scorpion);
+    width: 85%;
+    margin-bottom: 17px;
+}
+
+.product section {
+    block-size: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+}
+
+.product article {
+    scroll-snap-align: start;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    height: 161px;
+    margin-bottom: 14px;
+}
+
+.product article > p {
+    width: 85%;
+    font-family: Helvetica, sans-serif;
+    /* color: var(--color-scorpion); */
+    font-weight: 200;
+    line-height: 23px;
+    font-size: 14px;
+}
+
+.scroll-snap-x {
+    scrollbar-width: none;
+}
+
+.scroll-snap-x::-webkit-scrollbar {
+    width: 0%;
+    height: 0;
+}
+@media (hover: none) {
+}
+
+.product > header {
+    flex-shrink: 0;
+    min-block-size: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.product > header > .product-nav {
+    display: flex;
+}
+
+.product-promo {
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.2) 100%
+        ),
+        linear-gradient(
+                110.63deg,
+                rgba(255, 255, 255, 0.6) 39.01%,
+                rgba(255, 255, 255, 0) 63.68%
+            )
+
+}

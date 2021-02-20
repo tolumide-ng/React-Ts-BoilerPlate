@@ -1,5 +1,13 @@
 :root {
     --app-default-color: green;
+    --app-button-br: 5px;
+    --cont-h: 774px;
+    --header-h: 9.75rem;
+    --color-dusty-gray: #979797;
+    --color-deep-sea-green: #0a5566;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-scorpion: #5f5f5f;
 }
 
 @media screen and (max-width: 1024px) {

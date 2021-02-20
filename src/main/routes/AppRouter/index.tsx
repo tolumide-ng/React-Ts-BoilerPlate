@@ -4,7 +4,7 @@ import { Route, Switch, withRouter } from "react-router";
 import ErrorBoundary from "../../components/Pages/ErrorBoundary";
 import { LandingPage } from "../../components/Pages/LandingPage";
 import { LoadingPage } from "../../components/Pages/LoadingPage";
-import { NotFoundPage } from "../../components/Pages/NotFoundPage";
+// import { NotFoundPage } from "../../components/Pages/NotFoundPage";
 import { setDropDownAction } from "../../store/modules/dropDown/actions";
 import { RootState } from "../../store/modules/types";
 import "./index.css";
@@ -28,12 +28,12 @@ const AppRouter = withRouter(() => {
                 <ErrorBoundary>
                     <Suspense fallback={<LoadingPage />}>
                         <Switch>
-                            <Route path="/land" exact>
+                            <Route path="/" exact>
                                 <LandingPage />
                             </Route>
-                            <Route path="/">
+                            {/* <Route path="/">
                                 <NotFoundPage />
-                            </Route>
+                            </Route> */}
                         </Switch>
                     </Suspense>
                 </ErrorBoundary>

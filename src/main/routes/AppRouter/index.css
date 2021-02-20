@@ -3,7 +3,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: rgba(0, 0, 0, 0.05);
+    /* background: rgba(0, 0, 0, 0.05); */
+    font-family: helvetica;
 }
 
 .appwide-container {

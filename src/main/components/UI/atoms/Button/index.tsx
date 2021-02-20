@@ -17,6 +17,7 @@ interface ButtonProps {
     buttonAriaExpanded?: boolean;
     buttonTextClass?: string;
     buttonAriaControl?: string;
+    buttonJsx?: JSX.Element;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -67,6 +68,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                         className={props.buttonImgClass}
                     />
                 )}
+
+                {props.buttonJsx}
             </button>
         );
     }

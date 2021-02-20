@@ -1,3 +1,22 @@
 .ldpg {
-    background-color: green;
+    --ldpg-r-pt: 19px;
+    --ldpg-r-pb: 80px;
+    --ldpg-r-pr: 34px;
+    --ldpg-r-pl: 47px;
+    border: 1px solid red;
+}
+
+.ldpg-cont {
+    display: grid;
+    /* grid-template-columns: 58.6% 41.4%; */
+    grid-template-columns: 58% 42%;
+    /* grid-template-columns: 55% 45%; */
+    height: var(--cont-h);
+}
+
+.ldpg-right {
+    padding-top: var(--ldpg-r-pt);
+    padding-bottom: var(--ldpg-r-pb);
+    padding-right: var(--ldpg-r-pr);
+    padding-left: var(--ldpg-r-pl);
 }

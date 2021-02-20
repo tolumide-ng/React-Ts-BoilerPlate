@@ -1,0 +1,114 @@
+.ldr {
+    --ldr-button-w: 202px;
+    --ldr-button-h: 54px;
+}
+
+.ldr-location {
+    text-transform: uppercase;
+    display: flex;
+    font-size: 12px;
+    position: relative;
+    line-height: 14px;
+    mix-blend-mode: normal;
+    margin-bottom: 26px;
+}
+
+.ldr-dot {
+    height: 3px;
+    width: 3px;
+    border-radius: 100%;
+    transform: translateY(150%);
+    background-color: var(--color-dusty-gray);
+}
+
+.ldr-location--text {
+    margin-right: 8px;
+    color: var(--color-dusty-gray);
+}
+
+.ldr-product-info {
+    font-family: Helvetica, sans-serif;
+}
+
+.ldr-productname {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.ldr-productinfos {
+    display: flex;
+    align-items: baseline;
+}
+
+.ldr-price {
+    font-size: 24px;
+    color: var(--color-deep-sea-green);
+}
+
+.ldr-settingprice {
+    font-size: 13px;
+    /* line-height: 19px; */
+    margin-left: 5px;
+}
+
+.ldr-actions {
+    margin-right: 92px;
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 11px;
+    column-gap: 9px;
+    margin-bottom: 29px;
+}
+
+.ldr-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.ldr-button:active,
+.ldr-buttondrop:active {
+    transform: scale(0.98);
+}
+
+.ldr-buttontext {
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.ldr-choose,
+.ldr-experience {
+    height: var(--ldr-button-h);
+    border-radius: var(--app-button-br);
+}
+
+.ldr-experience {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+}
+
+.ldr-choose {
+    background-color: var(--color-deep-sea-green);
+    color: var(--color-white);
+}
+
+.ldr-buttoncont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ldr-buttondrop {
+    height: 30px;
+    border-radius: var(--app-button-br);
+    text-transform: capitalize;
+}
+
+.ldr-alerticon {
+    height: 17px;
+    width: 17px;
+    margin-left: 7px;
+    margin-right: 6px;
+}
