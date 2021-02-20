@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./index.css";
-// import promo from "../../../../assets/images/promo.jpeg"
-
+import promo from "../../../../assets/images/promo.jpeg";
 
 export const ProductTab = () => {
     const { matches: motionOk } = window.matchMedia(
@@ -188,7 +187,21 @@ export const ProductTab = () => {
                         </article>
                     </section>
                 </div>
-                <div className="product-promo"></div>
+                <div className="product-promo">
+                    <img src={promo} alt="" className="product-promo--img" />
+                    <div className="product-promo-cont">
+                        <p className="product-promo--text">
+                            Purchase an engagement <br /> ring and recieve{" "}
+                            <strong>10% off</strong>
+                            <br />
+                            your order*
+                        </p>
+                        <p className="product-promo--footer">
+                            *Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Vestibulum euis mod tellus justo.
+                        </p>
+                    </div>
+                </div>
             </section>
         </>
     );
