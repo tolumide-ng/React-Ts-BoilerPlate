@@ -31,6 +31,7 @@ module.exports = {
                         options: {
                             importLoaders: 1,
                             sourceMap: true,
+                            modules: true,
                         },
                     },
                     "postcss-loader",
@@ -41,6 +42,22 @@ module.exports = {
                         },
                     },
                 ],
+                include: /\.module\.css$/,
+            },
+            {
+                test: /\.(css|scss|sass)/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "postcss-loader",
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
+                exclude: /\.module\.css$/,
             },
         ],
     },
