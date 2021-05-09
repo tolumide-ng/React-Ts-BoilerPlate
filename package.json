@@ -40,7 +40,7 @@
     "redux-thunk": "^2.3.0",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^4.1.0"
+    "terser-webpack-plugin": "^5.1.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.3",
