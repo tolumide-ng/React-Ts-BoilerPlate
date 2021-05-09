@@ -17,7 +17,7 @@
   "dependencies": {
     "@types/react-router": "^5.1.8",
     "axios": "^0.21.1",
-    "css-loader": "^4.2.1",
+    "css-loader": "^5.2.4",
     "date-fns": "^2.15.0",
     "dayjs": "^1.9.1",
     "dotenv": "^8.2.0",
