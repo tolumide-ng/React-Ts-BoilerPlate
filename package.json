@@ -15,10 +15,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stripe/stripe-js": "^1.11.0",
     "@types/react-router": "^5.1.8",
-    "axios": "^0.19.2",
-    "compression": "^1.7.4",
+    "axios": "^0.21.1",
     "css-loader": "^4.2.1",
     "date-fns": "^2.15.0",
     "dayjs": "^1.9.1",
