@@ -7,14 +7,12 @@ import "../assets/styles/_base.css";
 import "../assets/styles/_default.css";
 import store from "../store/index";
 
-export const Routes = () => {
-    return (
-        <Provider store={store}>
-            <Router>
-                <AppRouter />
-            </Router>
-        </Provider>
-    );
-};
+export const Routes = () => (
+  <Provider store={store}>
+    <Router>
+      <AppRouter />
+    </Router>
+  </Provider>
+);
 
 export default Routes;
