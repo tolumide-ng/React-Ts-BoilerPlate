@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./index.css";
 
-export const NotFoundPage = () => {
+export function NotFoundPage() {
     return (
         <article className="notfd">
             <section className="notfd-cont">
@@ -10,4 +10,4 @@ export const NotFoundPage = () => {
             </section>
         </article>
     );
-};
+}

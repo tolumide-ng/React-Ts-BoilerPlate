@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Route, Switch, withRouter } from "react-router";
+import { Route, Routes } from "react-router";
 import ErrorBoundary from "../../components/Pages/ErrorBoundary";
 import { LandingPage } from "../../components/Pages/LandingPage";
 import { LoadingPage } from "../../components/Pages/LoadingPage";
@@ -9,7 +9,7 @@ import { setDropDownAction } from "../../store/modules/dropDown/actions";
 import { RootState } from "../../store/modules/types";
 import "./index.css";
 
-const AppRouter = withRouter(() => {
+const AppRouter = () => {
     const dispatch = useDispatch();
 
     const dropDownSelector = useSelector(
@@ -27,19 +27,15 @@ const AppRouter = withRouter(() => {
             <main className="appwide-container">
                 <ErrorBoundary>
                     <Suspense fallback={<LoadingPage />}>
-                        <Switch>
-                            <Route path="/" exact>
-                                <LandingPage />
-                            </Route>
-                            {/* <Route path="/">
-                                <NotFoundPage />
-                            </Route> */}
-                        </Switch>
+                        <Routes>
+                            <Route path="/" element={LandingPage} />
+                            {/* <Route path="/" /> */}
+                        </Routes>
                     </Suspense>
                 </ErrorBoundary>
             </main>
         </div>
     );
-});
+};
 
 export default AppRouter;

@@ -1,5 +1,6 @@
-import * as React from "react";
-import placeholder from "../../../../assets/imgs/placeholder.svg";
+import React from "react";
+
+import placeholder from "../../../../assets/images/placeholder.svg";
 import "./index.css";
 
 interface LoadImgDef {
@@ -13,25 +14,7 @@ interface LoadImgDef {
     loadPictureClass?: string;
 }
 
-export const LoadImg = (props: LoadImgDef) => {
-    let theImage = React.useRef<HTMLImageElement>(null);
-
-    const [imageLoaded, setImageLoaded] = React.useState(false);
-
-    const loadImages = (image: HTMLImageElement) => {
-        image.setAttribute("src", image?.getAttribute("data-src") || "{}");
-        image.onload = () => {
-            image.removeAttribute("data-src");
-            setImageLoaded(true);
-        };
-    };
-
-    React.useEffect(() => {
-        if (theImage.current) {
-            loadImages(theImage.current);
-        }
-    }, [true]);
-
+export function LoadImg(props: LoadImgDef) {
     return (
         <picture className={props.loadPictureClass}>
             <source
@@ -45,9 +28,7 @@ export const LoadImg = (props: LoadImgDef) => {
                 srcSet={props.loadImg}
                 className={props.loadClass}
             />
-
             <img
-                ref={theImage}
                 className={props.loadClass}
                 src={props?.loadDefaultImg ?? placeholder}
                 data-src={props.loadImg}
@@ -58,4 +39,4 @@ export const LoadImg = (props: LoadImgDef) => {
             />
         </picture>
     );
-};
+}

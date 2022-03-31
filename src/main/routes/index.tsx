@@ -8,11 +8,11 @@ import "../assets/styles/_default.css";
 import store from "../store/index";
 
 export const Routes = () => (
-  <Provider store={store}>
-    <Router>
-      <AppRouter />
-    </Router>
-  </Provider>
+    <Provider store={store}>
+        <Router>
+            <AppRouter />
+        </Router>
+    </Provider>
 );
 
 export default Routes;
