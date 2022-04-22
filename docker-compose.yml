@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+    web:
+        ports:
+            - 5050:5050
+        networks:
+            - webnet
+        environment:
+            BASE_URL: "${BASE_URL}"
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        volumes:
+            - ".:/app"
+        depends_on:
+            - api
+    # api:
+    #     ports:
+    #         - 3000:3000
+    #     hostname: backend
+    #     networks:
+    #         - webnet
+    #     image: tolumide/sysare_api
+networks:
+    webnet:
+volumes:
+    static_volumes:
