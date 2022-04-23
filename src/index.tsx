@@ -1,7 +1,8 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { Routes } from "./main/routes";
+import { createRoot } from "react-dom/client";
+import { Routes as App } from "./main/routes";
 
-const app = document.getElementById("app");
+const container = document.getElementById("app");
+const root = createRoot(container!);
 
-ReactDOM.render(<Routes />, app);
+root.render(<App />);

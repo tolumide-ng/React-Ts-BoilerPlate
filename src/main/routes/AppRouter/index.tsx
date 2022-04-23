@@ -28,7 +28,7 @@ const AppRouter = () => {
                 <ErrorBoundary>
                     <Suspense fallback={<LoadingPage />}>
                         <Routes>
-                            <Route path="/" element={LandingPage} />
+                            <Route path="/" element={<LandingPage />} />
                             {/* <Route path="/" /> */}
                         </Routes>
                     </Suspense>
