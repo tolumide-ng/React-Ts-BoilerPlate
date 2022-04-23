@@ -1,33 +1,33 @@
-import * as React from "react";
+import React, { Component, ErrorInfo, ReactNode } from "react";
 import { NotFoundPage } from "../NotFoundPage";
 import "./index.css";
 
-interface ComponentState {
+interface IState {
     hasError: boolean;
 }
 
-export class ErrorBoundary extends React.Component<{}, ComponentState> {
-    constructor(props: { children: JSX.Element }) {
-        super(props);
-        this.state = { hasError: false };
+interface IProps {
+    children: ReactNode;
+}
+
+export class ErrorBoundary extends Component<IProps, IState> {
+    public state: IState = { hasError: false };
+
+    public static getDerivedStateFromError(_: Error): IState {
+        return { hasError: true };
     }
 
-    componentDidCatch(error: Error, info: React.ErrorInfo) {
-        this.setState({ hasError: true });
-        console.log("WITHIN THIS");
+    public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+        this.state = { hasError: false };
+        console.log("Uncaught error:", error, errorInfo);
     }
 
     render() {
-        const {
-            state: { hasError },
-            props: { children },
-        } = this;
-
-        if (hasError) {
+        if (this.state.hasError) {
             return <NotFoundPage />;
         }
 
-        return children;
+        return this.props.children;
     }
 }
 
