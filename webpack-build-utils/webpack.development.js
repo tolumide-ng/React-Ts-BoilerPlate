@@ -12,7 +12,7 @@ module.exports = {
         historyApiFallback: {
             disableRoot: true,
         },
-        port: 5050,
+        port: 5001,
     },
     output: {
         filename: "[name].bundle.js",

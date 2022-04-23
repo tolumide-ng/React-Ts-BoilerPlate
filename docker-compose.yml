@@ -3,7 +3,7 @@ version: "3.9"
 services:
     web:
         ports:
-            - 5050:5050
+            - 5001:5001
         networks:
             - webnet
         environment:
@@ -13,8 +13,8 @@ services:
             dockerfile: Dockerfile
         volumes:
             - ".:/app"
-        depends_on:
-            - api
+        # depends_on:
+        #     - api
     # api:
     #     ports:
     #         - 3000:3000
