@@ -3,7 +3,7 @@ version: "3.9"
 services:
     web:
         ports:
-            - 5001:5001
+            - 8000:8000
         networks:
             - webnet
         environment:

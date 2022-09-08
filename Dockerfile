@@ -2,7 +2,7 @@ FROM node:17.3.1 AS base
 RUN npm i -g node-sass@7.0.1
 
 WORKDIR /app
-EXPOSE 5001
+EXPOSE 8000
 ENV NODE_ENV "dev"
 COPY package*.json ./
 COPY . ./
@@ -24,7 +24,7 @@ CMD ["npm", "run", "dev"]
 FROM base AS prod
 COPY . ./
 RUN npm run build
-CMD [ "npm" "start" ]
+# CMD [ "npm" "start" ]
 # ARG APP=/usr/src/app
 
 # RUN apt-get update \
