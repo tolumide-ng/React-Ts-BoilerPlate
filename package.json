@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "lint": "eslint --init",
-        "start": "npm run build && node server.js",
+        "start": "node server.js",
         "dev": "webpack serve",
         "build": "rm -rf ./dist && webpack --mode=production",
         "test": "jest",
